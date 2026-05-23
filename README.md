@@ -34,10 +34,6 @@ Se trata de un cliente ligero orientado a demostrar la integración con servicio
   - Autenticación con `ClientSecretCredential`
 - **Dotenv Java**
   - Gestión de variables de entorno desde archivo `.env`
-- **SLF4J (simple logger)**
-  - Logging básico
-- **JUnit**
-  - Testing (incluido por defecto)
 
 ---
 

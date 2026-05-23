@@ -48,6 +48,9 @@ El proyecto utiliza un modelo de autenticación basado en:
 - OAuth 2.0
 - Client Credentials Flow
 - Generación de token de acceso para consumir Microsoft Graph
+- Referencias:
+     https://learn.microsoft.com/en-us/entra/identity-platform/v2-oauth2-client-creds-grant-flow
+     https://learn.microsoft.com/en-us/graph/auth/auth-concepts
 
 ---
 
@@ -57,7 +60,7 @@ El proyecto utiliza un modelo de autenticación basado en:
   - asunto
   - cuerpo
   - destinatarios
-- Envío de emails mediante Microsoft Graph API
+- Envío de emails mediante Microsoft Graph API - https://learn.microsoft.com/es-es/graph/api/user-sendmail?view=graph-rest-1.0&tabs=http
 - Uso del endpoint: POST https://graph.microsoft.com/v1.0/users/{user-id}/sendMail
 
 ---

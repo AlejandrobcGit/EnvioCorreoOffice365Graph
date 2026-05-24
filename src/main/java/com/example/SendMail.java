@@ -34,8 +34,8 @@ public class SendMail {
         String to           = dotenv.get("to");
 
         // Contenido
-        String subject      = System.getenv().getOrDefault("MAIL_SUBJECT", "Prueba Microsoft Graph (App-Only)");
-        String bodyText     = System.getenv().getOrDefault("MAIL_BODY", "Hola! Este correo fue enviado con Microsoft Graph desde Java.");
+        String subject      = "Prueba Microsoft Graph (App-Only)";
+        String bodyText     = "Hola! Este correo fue enviado con Microsoft Graph desde Java.";
 
         // Scope para client credentials: resource + /.default [4](https://learn.microsoft.com/en-us/entra/identity-platform/scenario-daemon-acquire-token)
         String[] scopes = new String[] { "https://graph.microsoft.com/.default" };

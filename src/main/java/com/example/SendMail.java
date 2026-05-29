@@ -74,13 +74,19 @@ public class SendMail {
 
         // === SEND ===
         // Endpoint equivalente: POST /users/{id|userPrincipalName}/sendMail [1](https://learn.microsoft.com/en-us/graph/api/user-sendmail?view=graph-rest-1.0)
-        graphClient.users().byUserId(senderUpn)
-                .sendMail()
-                .post(postBody);
+         try {
+            graphClient.users().byUserId(senderUpn)
+                    .sendMail()
+                    .post(postBody);
 
-        System.out.println("Correo enviado con éxito (solicitud aceptada).");
-        System.out.println("   Remitente: " + senderUpn);
-        System.out.println("   Destino:   " + to);
-        System.out.println("   Asunto:    " + subject);
-    }
-}
+            System.out.println("Correo enviado con éxito (solicitud aceptada).");
+            System.out.println("   Remitente: " + senderUpn);
+            System.out.println("   Destino:   " + to);
+            System.out.println("   Asunto:    " + subject);
+        } catch (Exception e) {
+            System.err.println("Error al enviar correo: " + e.getMessage());
+            System.exit(1);
+        }
+
+    }  // ← cierre del main
+}      // ← cierre de la clase SendMail
